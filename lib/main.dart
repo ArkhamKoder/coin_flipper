@@ -8,7 +8,7 @@ void main() {
         appBar: AppBar(
           title: const Center(
             child: Text(
-              'Coin Flip!',
+              'Coin Flipper!',
               style: TextStyle(
                 fontFamily: 'LuxuriousRoman',
                 fontWeight: FontWeight.bold,
@@ -19,6 +19,7 @@ void main() {
           backgroundColor: Colors.yellow.shade200,
         ),
         body: const MyBody(),
+        backgroundColor: Colors.yellow.shade200,
       ),
     ),
   );
@@ -35,14 +36,16 @@ class _MyBodyState extends State<MyBody> {
   int randomNumber = 1;
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: MaterialButton(
-        onPressed: () {
-          setState(() {
-            randomNumber = Random().nextInt(2) + 1;
-          });
-        },
-        child: Image.asset('images/$randomNumber.png'),
+    return SafeArea(
+      child: Center(
+        child: MaterialButton(
+          onPressed: () {
+            setState(() {
+              randomNumber = Random().nextInt(2) + 1;
+            });
+          },
+          child: Image.asset('images/$randomNumber.png'),
+        ),
       ),
     );
   }
