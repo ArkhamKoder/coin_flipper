@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.coin_flip">
    <application
-        android:label="coin_flip"
+        android:label="Coin Flipper!"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -16,10 +16,10 @@ void main() {
               ),
             ),
           ),
-          backgroundColor: Colors.yellow.shade200,
+          backgroundColor: Colors.blueAccent,
         ),
         body: const MyBody(),
-        backgroundColor: Colors.yellow.shade200,
+        backgroundColor: Colors.blueAccent,
       ),
     ),
   );
