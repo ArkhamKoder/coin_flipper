@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   return runApp(
@@ -31,12 +32,17 @@ class MyBody extends StatefulWidget {
 }
 
 class _MyBodyState extends State<MyBody> {
+  int randomNumber = 1;
   @override
   Widget build(BuildContext context) {
     return Center(
       child: MaterialButton(
-        onPressed: null,
-        child: Image.asset('images/tail.png'),
+        onPressed: () {
+          setState(() {
+            randomNumber = Random().nextInt(2) + 1;
+          });
+        },
+        child: Image.asset('images/$randomNumber.png'),
       ),
     );
   }
